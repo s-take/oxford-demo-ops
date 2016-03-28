@@ -1,0 +1,30 @@
+---
+driver:
+  name: docker_cli
+
+provisioner:
+  name: chef_zero
+
+transport:
+  name: docker_cli
+
+verifier:
+  name: shell
+  command: rspec -c -f d -I serverspec serverspec/docker_spec.rb
+
+platforms:
+#  - name: ubuntu-14.04
+  - name: centos-6.7
+    driver_config:
+      image: centos:6.7
+  - name: centos-7
+    driver_config:
+      image: centos:centos7
+      privileged: true
+      run_command: /sbin/init; sleep 3
+
+suites:
+  - name: default
+    run_list:
+      - recipe[docker::default]
+    attributes:

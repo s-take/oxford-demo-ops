@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="rspec" tests="4" failures="0" errors="0" time="2.129666" timestamp="2016-02-28T02:01:56+09:00">
+  <!-- Randomized with seed 45306 -->
+  <properties/>
+  <testcase classname="serverspec.nginx_spec" name="nginx::default Package &quot;nginx&quot; should be installed" file="./serverspec/nginx_spec.rb" time="1.609005"/>
+  <testcase classname="serverspec.nginx_spec" name="nginx::default Service &quot;nginx&quot; should be enabled" file="./serverspec/nginx_spec.rb" time="0.165319"/>
+  <testcase classname="serverspec.nginx_spec" name="nginx::default Service &quot;nginx&quot; should be running" file="./serverspec/nginx_spec.rb" time="0.181003"/>
+  <testcase classname="serverspec.nginx_spec" name="nginx::default Port &quot;8080&quot; should be listening" file="./serverspec/nginx_spec.rb" time="0.172781"/>
+</testsuite>

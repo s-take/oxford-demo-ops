@@ -1,0 +1,12 @@
+server {
+    listen 8080;
+ 
+    location / {
+        proxy_pass http://backends;
+    }
+}
+ 
+upstream backends {
+    server localhost:9080;
+    server localhost:9081;
+}
